@@ -17,8 +17,11 @@ const secret = '23jfizj34nkfppsf133mvjdai2er';
 const uploadMiddleWare = multer({ dest: 'uploads/' });
 
 // app.use(cors({ credentials: true, origin: ['http://localhost:5173','https://articula.vercel.app' ]}));
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: 'https://articula.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // If using cookies or authentication
+}));app.use(express.json());
 app.use(cookieParser());
 
 // Get the directory name of the current module
