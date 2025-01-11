@@ -15,7 +15,7 @@ export default function EditPost() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://articula-backend.vercel.app/post/${id}`)
+        const response = await fetch(`https://articula-backend.onrender.com/post/${id}`)
         if (response.ok) {
           const postInfo = await response.json();
           setTitle(postInfo.title)
@@ -45,7 +45,7 @@ export default function EditPost() {
       data.set('file', files?.[0]);
     }
 
-    const response = await fetch('https://articula-backend.vercel.app/post', {
+    const response = await fetch('https://articula-backend.onrender.com/post', {
       method: 'PUT',
       body: data,
       credentials: 'include'
