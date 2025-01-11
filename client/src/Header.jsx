@@ -8,7 +8,7 @@ export default function Header() {
   //------------------------------------------------------------------------------------------------------
   // useEffect(()=>
   // {
-  //   fetch('http://localhost:4000/profile',{
+  //   fetch('https://articula-backend.vercel.app/profile',{
   //     credentials:'include',
   //   }).then(response=>{
   //     response.json().then(userInfo=>{
@@ -22,7 +22,7 @@ export default function Header() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://localhost:4000/profile', {
+        const response = await fetch('https://articula-backend.vercel.app/profile', {
           credentials: 'include',
         });
         if (response.ok) {
@@ -47,7 +47,7 @@ export default function Header() {
 
     if (confirmLogout) {
       try {
-        const response = await fetch('http://localhost:4000/logout', {
+        const response = await fetch('https://articula-backend.vercel.app/logout', {
           credentials: 'include',
           method: 'POST',
         });

@@ -10,7 +10,7 @@ export default function RegisterPage() {
   async function register(ev) {
     ev.preventDefault();
     try {
-      const response = await fetch('http://localhost:4000/register', {
+      const response = await fetch('https://articula-backend.vercel.app/register', {
         method: 'POST',
 
         body: JSON.stringify({ username, password }),

@@ -5,7 +5,7 @@ export default function HomePage() {
     //^^empty array
     //-----------------------------------------------------------------------------------
     // useEffect(() => {
-    //     fetch('http://localhost:4000/post').then(response => {
+    //     fetch('https://articula-backend.vercel.app/post').then(response => {
     //       response.json().then(posts => {
     //         setPosts(posts);
     //       });
@@ -16,7 +16,7 @@ export default function HomePage() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await fetch('http://localhost:4000/post')
+                const response = await fetch('https://articula-backend.vercel.app/post')
                 if (response.ok) {
                     const posts = await response.json()
                     setPosts(posts)

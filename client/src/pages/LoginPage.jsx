@@ -11,7 +11,7 @@ export default function LoginPage() {
   async function login(ev) {
     ev.preventDefault();
     try {
-      const response = await fetch('http://localhost:4000/login', {
+      const response = await fetch('https://articula-backend.vercel.app/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
