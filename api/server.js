@@ -16,7 +16,8 @@ const app = express();
 const secret = '23jfizj34nkfppsf133mvjdai2er';
 const uploadMiddleWare = multer({ dest: 'uploads/' });
 
-app.use(cors({ credentials: true, origin: ['http://localhost:5173','https://articula.vercel.app' ]}));
+// app.use(cors({ credentials: true, origin: ['http://localhost:5173','https://articula.vercel.app' ]}));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
