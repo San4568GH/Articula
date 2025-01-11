@@ -95,6 +95,10 @@ app.post('/logout', (req, res) => {
   res.json({ message: 'Logged out' });
 });
 
+app.get("/check", (req,res) => {
+  res.send("Hi");
+})
+
 // Post Functions (Create, Update, Fetch, and View by ID)
 app.post('/post', uploadMiddleWare.single('file'), async (req, res) => {
   const { originalname, path } = req.file;
