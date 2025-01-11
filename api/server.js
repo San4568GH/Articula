@@ -17,7 +17,7 @@ const uploadMiddleWare = multer({ dest: 'uploads/' });
 
 // Proper CORS configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://articula.vercel.app',], // Allow both local and deployed frontend
+  origin: ['http://localhost:5173', 'https://articula.vercel.app'], // Allow both local and deployed frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
   credentials: true // Allow cookies or authentication headers
 }));
