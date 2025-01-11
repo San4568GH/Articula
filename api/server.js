@@ -30,7 +30,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 //dirname in es6,__dirname in cj
 
 //MongoDB Connection
-mongoose.connect('process.env.MONGO_URI', {
+mongoose.connect("mongodb+srv://blogapp:ZTPOCGiLYC2Fe1xp@cluster123.y9nlqx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster123", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected successfully'))
