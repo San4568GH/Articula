@@ -13,7 +13,7 @@ export default function PostPage() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://articula-backend.onrender.com/post/${id}`)
+        const response = await fetch(`http://localhost:4000/post/${id}`)
         if (response.ok) {
           const postInfo = await response.json();
           setPostInfo(postInfo)
@@ -48,7 +48,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`https://articula-backend.onrender.com/${postInfo.cover}`} alt="" />
+        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
       </div>
       <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
     </div>

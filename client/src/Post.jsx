@@ -7,7 +7,7 @@ export default function Post({ _id, title, summary, cover, content, author, crea
         <section className="article">
             <div className="image">
                 <Link to={`/post/${_id}`}>
-                    <img src={'https://articula-backend.onrender.com/' + cover} />
+                    <img src={'http://localhost:4000/' + cover} />
                     {/* ^^as the image is in backend */}
                 </Link>
 
