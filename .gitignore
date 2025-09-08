@@ -1,9 +1,3 @@
-# Documentation files (development/setup guides)
-CLOUDINARY_SETUP_GUIDE.md
-FIXES_SUMMARY.md
-MIGRATION_GUIDE.md
-README_new.md
-
 # Logs
 logs
 *.log
@@ -42,3 +36,8 @@ uploads/
 # Migration reports
 api/migration-report.json
 
+# Documentation files (development/setup guides)
+CLOUDINARY_SETUP_GUIDE.md
+FIXES_SUMMARY.md
+MIGRATION_GUIDE.md
+README_new.md
