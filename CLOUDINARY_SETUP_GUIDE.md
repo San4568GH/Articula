@@ -34,9 +34,7 @@
 Edit your `/api/.env` file and replace the placeholder values:
 
 ```env
-MONGO_URI=mongodb+srv://blogapp:ZTPOCGiLYC2Fe1xp@cluster123.y9nlqx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster123
-PASSWORD=ZTPOCGiLYC2Fe1xp
-JWT_SECRET=23jfizj34nkfppsf133mvjdai2er
+MONGO_URI=your_actual_mongo_uri
 
 # Cloudinary Configuration - REPLACE WITH YOUR ACTUAL VALUES
 CLOUDINARY_CLOUD_NAME=your_actual_cloud_name
