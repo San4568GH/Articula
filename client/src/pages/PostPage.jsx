@@ -10,6 +10,19 @@ export default function PostPage() {
   const { id } = useParams()
   const { userInfo } = useContext(UserContext);
 
+  // Helper function to get correct image URL
+  const getImageUrl = (coverPath) => {
+    if (!coverPath) return '';
+    
+    // If it's already a full URL (Cloudinary), use as is
+    if (coverPath.startsWith('http://') || coverPath.startsWith('https://')) {
+      return coverPath;
+    }
+    
+    // If it's a local path, prepend the server URL
+    return `http://localhost:4000/${coverPath}`;
+  };
+
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -31,7 +44,6 @@ export default function PostPage() {
 
   if (!postInfo) return ''
 
-
   return (
     <div className="post-page">
       <h1>{postInfo.title}</h1>
@@ -48,11 +60,11 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+        <img src={getImageUrl(postInfo.cover)} alt={postInfo.title} />
       </div>
       <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
     </div>
-
   )
+}
 
 }
